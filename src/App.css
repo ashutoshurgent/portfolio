@@ -1,0 +1,240 @@
+/* Global Styles */
+.app {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  position: relative; /* Ensure proper layering */
+  min-height: 100vh; /* Full viewport height */
+  overflow: visible; /* Changed from hidden for testing */
+}
+
+/* Typing Background Styles */
+.typing-background {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5; /* Increased for visibility */
+  /* pointer-events: none; Prevent interaction */
+  z-index: 10; /* Above all content*/
+  pointer-events: none;
+  font-size: 28px;
+  color: #00cc99;
+}
+
+.typing-background pre {
+  font-family: 'Courier New', monospace;
+  font-size: 12px; /* Subtle size */
+  color: #ccc; /* Lighter gray for better contrast */
+  white-space: pre-wrap;
+  line-height: 1.2;
+  margin: 0;
+  padding: 1rem;
+  animation: fadeIn 8s infinite alternate;
+}
+
+.sidebar-images {
+  position: fixed;
+  right: 10px; /* Distance from the right edge */
+  top: 0%; /* Start from 20% of the page height */
+  display: flex;
+  flex-direction: column;
+  
+  z-index: 2; /* Above content but below typing-background */
+}
+
+.sidebar-image {
+  max-width: auto; /*Adjust size as needed*/
+  height: auto;
+  opacity: 0.1; /* Low opacity */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: opacity 0.3s ease; 
+  /* Smooth opacity transition on hover */
+}
+
+.sidebar-image:hover {
+  opacity:0.1; /* Full opacity on hover */ 
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.2; }
+  to { opacity: 0.5; }
+}
+
+/* Header Styles */
+.header {
+  background-color: #2f2e2e;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  position: relative;
+  /* z-index: 1;  Above typing background */
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00b7d9;
+  /* z-index: 1; */
+}
+
+.header-content p {
+  margin: 0.5rem 0;
+  color: #bbb;
+}
+
+nav a {
+  color: #00b7d9;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+/* Section Styles */
+.section {
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* z-index: 1;  Above typing background */
+}
+
+.section h2 {
+  color: #00b7d9;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.section p {
+  max-width: 800px;
+}
+
+/* Skills Grid */
+.skills-grid ,.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-card,  .trait-card { 
+  background-color: #2c2c2c;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  z-index: 3;
+}
+.skill-card:hover, .trait-card:hover {
+  background-color: #444; /* Slightly lighter gray on hover */
+  border: 2px solid #00d8ff;/* Cyan border on hover for consistency */
+  transform: scale(1.1); 
+}
+
+.skill-card a {
+  color: #00d8ff;
+}
+
+.trait-card p {
+  margin: 5px 0 0;
+  color: #00d8ff;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+  z-index: 3
+}
+
+.project-card {
+  background-color: #2c2c2c;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  transition: transform 0.3s;
+  z-index: 3
+}
+
+.project-card h3 {
+  color: #00b7d9;
+  margin-top: 0;
+  z-index: 3
+}
+
+.project-card p {
+  color: #bbb;
+  z-index: 3
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card a {
+  color: #00b7d9;
+  text-decoration: none;
+} /* Ensure project links also match */
+.contact a {
+  color: #3e817a; /* Teal color for contact links */
+  /* text-decoration: none; */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.contact a:hover {
+  color: #00ffcc; /* Slightly brighter teal on hover for interactivity */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2c2c2c;
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid #333;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* Above typing background */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  .section {
+    padding: 2rem 1rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
