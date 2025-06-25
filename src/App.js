@@ -174,9 +174,9 @@ const App = () => {
             <a href="https://github.com/ashutoshurgent/portfolio" target="_blank" rel="noopener noreferrer">View Code</a>
           </div>
           <div className="project-card">
-            <h3>E-Commerce App</h3>
-            <p>An online store using AWS Lambda and RDS for backend.</p>
-            <a href="https://github.com/ashutoshurgent/ecommerce" target="_blank" rel="noopener noreferrer">View Code</a>
+            <h3>Antifouling Paint Web-App</h3>
+            <p>A tool whose frontend is designed using React and backend is designed using Flask. The hosting and deployment has been done over Github. The backend call has been done using an API.</p>
+            <a href="https://github.com/ashutoshurgent/Antifouling" target="_blank" rel="noopener noreferrer">View Code</a>
           </div>
         </div>
       </section>
