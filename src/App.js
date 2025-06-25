@@ -177,6 +177,7 @@ const App = () => {
             <h3>Antifouling Paint Web-App</h3>
             <p>A tool whose frontend is designed using React and backend is designed using Flask. The hosting and deployment has been done over Github. The backend call has been done using an API.</p>
             <a href="https://ashutoshurgent.github.io/Antifouling" target="_blank" rel="noopener noreferrer">View Page</a>
+            <a href="https://github.com/ashutoshurgent/Antifouling" target="_blank" rel="noopener noreferrer">View Code</a>
           </div>
         </div>
       </section>
